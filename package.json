@@ -16,7 +16,8 @@
         "lint": "eslint . --ext .ts,.tsx",
         "lint:fix": "eslint . --ext .ts,.tsx --fix",
         "format": "prettier --write \"src/**/*.{ts,tsx,css}\"",
-        "type-check": "tsc --noEmit"
+        "type-check": "tsc --noEmit",
+        "ci": "npm run type-check && npm run lint && npm test && npm run build"
     },
     "dependencies": {
         "chart.js": "^4.4.0",
