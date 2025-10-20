@@ -76,7 +76,7 @@ export class CalculatorService {
     return liabilities
       .filter((l) => l.isRecurring())
       .reduce((sum, liability) => {
-        const recurringDetails = liability.recurringDetails;
+        const {recurringDetails} = liability;
         return sum + (recurringDetails?.monthlyAmount || 0);
       }, 0);
   }

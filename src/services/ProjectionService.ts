@@ -12,9 +12,7 @@ export class ProjectionService {
    * @returns Projected total liability value
    */
   projectLiabilities(liabilities: Liability[], months: number): number {
-    return liabilities.reduce((total, liability) => {
-      return total + liability.getProjectedValue(months);
-    }, 0);
+    return liabilities.reduce((total, liability) => total + liability.getProjectedValue(months), 0);
   }
 
   /**
@@ -74,7 +72,7 @@ export class ProjectionService {
     return liabilities
       .filter((l) => l.isLoan())
       .reduce((total, liability) => {
-        const loanDetails = liability.loanDetails;
+        const {loanDetails} = liability;
         if (!loanDetails) return total;
 
         const paymentMonths = Math.min(months, loanDetails.remainingMonths);

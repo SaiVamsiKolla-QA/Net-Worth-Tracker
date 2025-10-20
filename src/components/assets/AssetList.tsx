@@ -13,7 +13,7 @@ const AssetList: React.FC = () => {
   const [showForm, setShowForm] = useState(false);
   const [editingAsset, setEditingAsset] = useState<any>(null);
 
-  const assets = portfolio.assets;
+  const {assets} = portfolio;
 
   const handleDelete = async (id: string, name: string) => {
     if (window.confirm(`Are you sure you want to delete "${name}"?`)) {

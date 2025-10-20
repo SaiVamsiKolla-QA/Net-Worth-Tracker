@@ -10,7 +10,9 @@ import { IPortfolio } from './types';
  */
 export class Portfolio implements IPortfolio {
   private _assets: Asset[] = [];
+
   private _liabilities: Liability[] = [];
+
   private _snapshots: Snapshot[] = [];
 
   constructor(data?: IPortfolio) {

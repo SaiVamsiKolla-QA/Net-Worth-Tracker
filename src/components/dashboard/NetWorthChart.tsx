@@ -85,9 +85,7 @@ const NetWorthChart: React.FC<NetWorthChartProps> = ({ snapshots, projections })
       },
       tooltip: {
         callbacks: {
-          label: (context: any) => {
-            return `${context.dataset.label}: ${formatCurrency(context.parsed.y)}`;
-          },
+          label: (context: any) => `${context.dataset.label}: ${formatCurrency(context.parsed.y)}`,
         },
       },
     },

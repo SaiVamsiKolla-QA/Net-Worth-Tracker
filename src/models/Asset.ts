@@ -13,12 +13,19 @@ import {
  */
 export class Asset implements IAsset {
   id: string;
+
   name: string;
+
   type: AssetType;
+
   value: number;
+
   cryptoDetails?: ICryptoAsset;
+
   metalDetails?: IPreciousMetalAsset;
+
   createdAt: Date;
+
   updatedAt: Date;
 
   constructor(data: AssetFormData, id?: string) {

@@ -10,8 +10,7 @@ import './styles/global.css';
 import './styles/theme.css';
 import './components/assets/Assets.css';
 
-const App: React.FC = () => {
-  return (
+const App: React.FC = () => (
     <ThemeProvider>
       <PortfolioProvider>
         <Router>
@@ -26,6 +25,5 @@ const App: React.FC = () => {
       </PortfolioProvider>
     </ThemeProvider>
   );
-};
 
 export default App;

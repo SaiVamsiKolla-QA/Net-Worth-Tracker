@@ -13,8 +13,11 @@ import { AssetFormData, LiabilityFormData } from '../models/types';
  */
 export class NetWorthService {
   private portfolio: Portfolio;
+
   private repository: IRepository;
+
   private calculator: CalculatorService;
+
   private projection: ProjectionService;
 
   constructor(repository: IRepository) {
@@ -135,8 +138,8 @@ export class NetWorthService {
    * Get summary statistics
    */
   getSummary() {
-    const assets = this.portfolio.assets;
-    const liabilities = this.portfolio.liabilities;
+    const {assets} = this.portfolio;
+    const {liabilities} = this.portfolio;
 
     return {
       totalAssets: this.calculator.calculateTotalAssets(assets),
@@ -155,8 +158,8 @@ export class NetWorthService {
    * Get net worth projections
    */
   getProjections(months: number = 12) {
-    const assets = this.portfolio.assets;
-    const liabilities = this.portfolio.liabilities;
+    const {assets} = this.portfolio;
+    const {liabilities} = this.portfolio;
     const currentAssets = this.calculator.calculateTotalAssets(assets);
 
     return this.projection.projectNetWorth(currentAssets, liabilities, months);
@@ -166,7 +169,7 @@ export class NetWorthService {
    * Export portfolio data
    */
   async exportData(): Promise<string> {
-    return await this.repository.export();
+    return this.repository.export();
   }
 
   /**

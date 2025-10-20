@@ -18,8 +18,7 @@ const SummaryCards: React.FC<SummaryCardsProps> = ({
   liquidityRatio,
   monthlyExpenses,
   totalInterest,
-}) => {
-  return (
+}) => (
     <div className="summary-cards grid grid-4">
       <div className="card">
         <h3>Debt-to-Asset Ratio</h3>
@@ -48,6 +47,5 @@ const SummaryCards: React.FC<SummaryCardsProps> = ({
       </div>
     </div>
   );
-};
 
 export default SummaryCards;

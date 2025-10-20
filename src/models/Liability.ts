@@ -13,12 +13,19 @@ import {
  */
 export class Liability implements ILiability {
   id: string;
+
   name: string;
+
   type: LiabilityType;
+
   value: number;
+
   loanDetails?: ILoan;
+
   recurringDetails?: IRecurringExpense;
+
   createdAt: Date;
+
   updatedAt: Date;
 
   constructor(data: LiabilityFormData, id?: string) {

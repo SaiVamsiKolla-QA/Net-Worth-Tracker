@@ -13,7 +13,7 @@ const LiabilityList: React.FC = () => {
   const [showForm, setShowForm] = useState(false);
   const [editingLiability, setEditingLiability] = useState<any>(null);
 
-  const liabilities = portfolio.liabilities;
+  const {liabilities} = portfolio;
 
   const handleDelete = async (id: string, name: string) => {
     if (window.confirm(`Are you sure you want to delete "${name}"?`)) {

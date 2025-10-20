@@ -11,8 +11,7 @@ const NetWorthCard: React.FC<NetWorthCardProps> = ({
   totalAssets,
   totalLiabilities,
   netWorth,
-}) => {
-  return (
+}) => (
     <div className="net-worth-card card">
       <h2>Current Net Worth</h2>
       <div className="net-worth-summary">
@@ -33,6 +32,5 @@ const NetWorthCard: React.FC<NetWorthCardProps> = ({
       </div>
     </div>
   );
-};
 
 export default NetWorthCard;

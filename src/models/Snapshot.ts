@@ -7,11 +7,17 @@ import { ISnapshot, IAsset, ILiability } from './types';
  */
 export class Snapshot implements ISnapshot {
   id: string;
+
   date: Date;
+
   totalAssets: number;
+
   totalLiabilities: number;
+
   netWorth: number;
+
   assets: IAsset[];
+
   liabilities: ILiability[];
 
   constructor(data: Omit<ISnapshot, 'id'>, id?: string) {
