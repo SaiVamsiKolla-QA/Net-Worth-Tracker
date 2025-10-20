@@ -42,9 +42,7 @@ const NetWorthChart: React.FC<NetWorthChartProps> = ({ snapshots, projections })
     const projectionData = projections.map((p) => p.netWorth);
 
     const labels = [...historicalLabels, ...projectionLabels];
-    const data = [...historicalData, ...projectionData];
-
-    return {
+     return {
       labels,
       datasets: [
         {

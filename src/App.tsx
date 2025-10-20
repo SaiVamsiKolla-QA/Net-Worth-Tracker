@@ -4,8 +4,11 @@ import { ThemeProvider } from './contexts/ThemeContext';
 import { PortfolioProvider } from './contexts/PortfolioContext';
 import Layout from './components/layout/Layout';
 import Dashboard from './components/dashboard/Dashboard';
+import AssetList from './components/assets/AssetList';
+import LiabilityList from './components/liabilities/LiabilityList';
 import './styles/global.css';
 import './styles/theme.css';
+import './components/assets/Assets.css';
 
 const App: React.FC = () => {
   return (
@@ -15,8 +18,8 @@ const App: React.FC = () => {
           <Layout>
             <Routes>
               <Route path="/" element={<Dashboard />} />
-              <Route path="/assets" element={<div>Assets Page (Coming Soon)</div>} />
-              <Route path="/liabilities" element={<div>Liabilities Page (Coming Soon)</div>} />
+              <Route path="/assets" element={<AssetList />} />
+              <Route path="/liabilities" element={<LiabilityList />} />
             </Routes>
           </Layout>
         </Router>

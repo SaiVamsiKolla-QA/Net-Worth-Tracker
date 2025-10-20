@@ -1,7 +1,7 @@
 import { Asset } from './Asset';
 import { Liability } from './Liability';
 import { Snapshot } from './Snapshot';
-import { IPortfolio, IAsset, ILiability, ISnapshot } from './types';
+import { IPortfolio } from './types';
 
 /**
  * Portfolio class - Aggregate Root in DDD
